@@ -1,12 +1,13 @@
-# Ryu static load balancing
+# Ryu OpenFlow static load balancing project for PoliMi [BONSAI Lab](https://www.bonsai.deib.polimi.it/)
 
 ## Caratteristiche degli host e della rete 
+
+![image](https://github.com/Mattiabe98/ryu-static-load-balancing/assets/49247389/c0996be1-ef06-4a92-aa1f-1e472a79f13e)
 
 Gli host sono dispositivi virtuali realizzati con Mininet, connessi alla rete realizzata mediante un unico 
 switch. Non abbiamo bisogno dell’argomento “--arp” di Mininet dato che il controller gestisce tutte le 
 richieste ARP tramite proxy.
 
-Client e server 
 
 I client possono possedere qualsiasi indirizzo IP della subnet 10.0.0.0/8 ad eccezione del range 10.0.1.0/24, 
 il quale è dedicato ai server. 
@@ -75,12 +76,17 @@ Il controllore dice allo switch dove mandare quel pacchetto.
 Il controllore si comporterà anche da proxy ARP, occupandosi di identificare e rispondere alle ARP request 
 dei vari host e server, facendo sembrare “trasparente” il load balancer all’utente finale. 
 
+## Risultati
+
+![image](https://github.com/Mattiabe98/ryu-static-load-balancing/assets/49247389/a29d60c6-19af-49f0-9dbe-5ed265cfd8e3)
+![image](https://github.com/Mattiabe98/ryu-static-load-balancing/assets/49247389/d5d9b834-a993-4136-b9d3-4e7f52fe5c0a)
+
 
 ## Developed By
 
+* [Mattia Bevilacqua](https://github.com/Mattiabe98)
 * Patatone
 * lucio97
-* Mattiabe98
 
 ## License
 
