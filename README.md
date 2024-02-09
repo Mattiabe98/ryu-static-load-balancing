@@ -1,16 +1,5 @@
 # Ryu static load balancing
 
-Topologia 
-I nodi sono collegati mediante una topologia a stella. 
-
-● "N" Client
-
-● "M" Server
-
-● 1 Controllore
-
-● 1 Switch
-
 ## Caratteristiche degli host e della rete 
 
 Gli host sono dispositivi virtuali realizzati con Mininet, connessi alla rete realizzata mediante un unico 
@@ -31,22 +20,11 @@ Il load balancer deve possedere un indirizzo MAC e un indirizzo IP prestabilito 
 di server disponibili. L’indirizzo IP deve essere presente nella stessa subnet dei client e server. 
 È possibile impostare quanto detto dichiarando queste variabili nel codice Python. 
 
-VIRTUAL_IP = '10.0.1.100' 
+``VIRTUAL_IP = '10.0.1.100' 
 VIRTUAL_MAC = '00:00:00:00:01:00' 
-SERVER_NUMBER = M 
+SERVER_NUMBER = M ``
 
 Dove il valore “M” va sostituito con il numero di server scelti. 
-
-## Tipo di traffico gestito:  
-• TCP 
-Il load balancer è stato configurato in modo tale da lavorare su tutti i flussi TCP; 
-• ICMP 
-Il controllore risponde con una ICMP_ECHO_REPLY nel caso in cui il load balancer riceva una 
-ICMP_ECHO_REQUEST; 
-• ARP 
-Viene gestito il traffico ARP in modo da riempire correttamente le tabelle di routing di tutti i nodi della 
-rete. 
-
 
 ## Obiettivo primario del progetto 
 Il controllore e lo switch devono lavorare sinergicamente per bilanciare il carico sulla rete senza 
