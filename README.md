@@ -2,10 +2,14 @@
 
 Topologia 
 I nodi sono collegati mediante una topologia a stella. 
-● "N" Client;  
-● "M" Server; 
-● 1 Controllore; 
-● 1 Switch. 
+
+● "N" Client
+
+● "M" Server
+
+● 1 Controllore
+
+● 1 Switch
 
 ## Caratteristiche degli host e della rete 
 
